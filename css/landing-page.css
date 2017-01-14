@@ -85,6 +85,41 @@ h6 {
     }
 }
 
+.about-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+}
+
+.about-message {
+    margin: 0;
+    font-size: 5em;
+    color: black;
+}
+
+.about-self {
+    text-align: left;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 100px;
+}
+
+.testimonial-message {
+    text-align: left;
+    font-size: 16px;
+    color: #696969;
+}
+
+.signature {
+    text-align: center;
+    color: #D3D3D3;
+    font-style: italic;
+    font-size: 16px;
+}
+
 .network-name {
     text-transform: uppercase;
     font-size: 14px;
