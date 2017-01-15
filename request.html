@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet">
+    <link href="css/request-page.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -70,9 +71,47 @@
         <!-- /.container -->
     </nav>
 
-	<div class="request-section">
-		
+	<div class="container">
+		<div class="request-section">
+			<h1>Request a Coach</h1>
+		    <hr class="section-heading-spacer">
+		    <div class="clearfix"></div>
+			
+			<div class="row">
+				<div class="col-lg-5">
+					<form class="request-form" action="https://formspree.io/requests@pstemcoaching.com" method="POST">
+						<input type="hidden" name="_next" value="index.html">
+						<div class="form-group">
+							<label for="sender-email">Your email address</label>
+							<input type="email" name="email" class="form-control" id="sender-email" placeholder="Enter email">
+						</div>
+						<div class="form-group">
+							<label for="subject">Subject</label>
+							<select name="_subject" class="form-control" id="subject">
+								<option value="" disabled selected>Select your subject</option>
+								<option value="Homework/Project Help">Homework/Project Help</option>
+								<option value="Test Preparation">Test Preparation</option>
+								<option value="Getting Ahead/Skill Mastery">Getting Ahead/Skill Mastery</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="message">Your message</label>
+							<textarea name="message" class="form-control" id="message" rows="5" placeholder="Type your message..."></textarea>
+						</div>
+						<button type="submit" class="btn btn-primary">Send</button>
+					</form>
+				</div>
+				<div class="col-lg-5 col-lg-offset-1">
+					<p class="lead request-instructions">
+						Let us know what service you would like and any additional information you feel is important. 
+						We will get back to you within 24 hours. Please feel free to request a specific coach, 
+						and we will try our best to accomodate you.  
+					</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
 
+		</div>
 	</div>
 
     <!-- /.content-section-a -->
@@ -116,6 +155,14 @@
                     <ul class="list-inline">
                         <li>
                             <a href="index.html">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#">Request a Coach</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="coaches.html">Our Coaches</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
