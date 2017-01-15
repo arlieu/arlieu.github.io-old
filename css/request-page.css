@@ -19,3 +19,8 @@ h1, label {
     margin-top: 10px;
     color: black;
 }
+
+.disclaimer {
+    font-weight: lighter;
+    color: orange;
+}
