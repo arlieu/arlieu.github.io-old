@@ -32,6 +32,8 @@ function submitContact() {
 		return true;
 	}
 
+	var subjectValid = "";
+	var messageValid = "";
 	function validSubject() {
 		var subject = document.getElementById("subject").value;
 		if (!subject) {
@@ -39,6 +41,7 @@ function submitContact() {
 			return false;
 		}
 
+		subjectValid = subject;
 		document.getElementById("error-label-subject").innerHTML="*";
 		return true;
 	}
@@ -57,6 +60,9 @@ function submitContact() {
 	var check = [validFirstName(), validLastName(), validEmail(), validSubject(), validMessage()];
 
 	if (check[0] && check[1] && check[2] && check[3] && check[4]) {
+		messageValid = "Subject: " + subjectValid + "\n\n" + document.getElementById("message").value;
+		document.getElementById("message").value=messageValid;
+		alert(document.getElementById("message").value);
 		alert("Message successfully sent!");
 		return true;
 	}
@@ -66,6 +72,10 @@ function submitContact() {
 }
 
 function submitRequest() {
+	var firstNameValid = "";
+	var lastNameValid = "";
+	var messageValid = "";
+
 	function validFirstName() {
 		var firstName = document.getElementById("first-name").value;
 		if (!/^[A-Za-z]+$/.test(firstName)) {
@@ -74,6 +84,7 @@ function submitRequest() {
 		}
 
 		document.getElementById("error-label-first-name").innerHTML="*";
+		firstNameValid = firstName;
 		return true;
 	}
 
@@ -85,6 +96,7 @@ function submitRequest() {
 		}
 
 		document.getElementById("error-label-last-name").innerHTML="*";
+		lastNameValid = lastName;
 		return true;
 	}
 
@@ -114,6 +126,8 @@ function submitRequest() {
 	var check = [validFirstName(), validLastName(), validEmail(), validSubject()];
 
 	if (check[0] && check[1] && check[2] && check[3]) {
+		messageValid = document.getElementById("message").value + "\n\n" + firstNameValid + " " + lastNameValid;
+		document.getElementById("message").value = messageValid;
 		alert("Message successfully sent!");
 		return true;
 	}
