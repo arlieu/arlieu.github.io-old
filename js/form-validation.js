@@ -62,7 +62,6 @@ function submitContact() {
 	if (check[0] && check[1] && check[2] && check[3] && check[4]) {
 		messageValid = "Subject: " + subjectValid + "\n\n" + document.getElementById("message").value;
 		document.getElementById("message").value=messageValid;
-		alert(document.getElementById("message").value);
 		alert("Message successfully sent!");
 		return true;
 	}
