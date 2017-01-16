@@ -117,16 +117,17 @@
                         <div class="col-lg-5 col-lg-offset-1">
                         	<p class="lead about-self">
                         		Hi, my name is Avery, and I am the owner and founder of Private STEM Coaching. Over the course of my 4+ years
-                        		working as a private tutor, I successfully taught a range of students with many different backgrounds and goals. 
+                        		working as a tutor, I successfully taught a range of students with many different backgrounds and goals. 
                         		I founded PSTEM Coaching because I recognize that each student is unique, and we here at PSTEM Coaching pride 
                         		ourselves on catering to all of our students' individual needs and preferences.
                         	</p>
                         </div>
                         <div class="col-lg-5">
                         	<p class="lead about-self">
-                        		When hiring coaches from PSTEM, you can expect high quality lessons with qualified subject experts. Most of our
-                        		coaches either have or are in the pursuit of their Bachelor's Degrees, and many also have plenty of relevant
-                        		industry experience. You can view their profiles in the 'Profiles' section and select the one the suits you best. 
+                        		When hiring coaches from PSTEM, you can expect high quality lessons with qualified subject experts. All of our
+                                coaches have or are in pursuit of some form of higher education, and many also have plenty of relevant
+                        		industry experience. You can view their profiles in the '<a href="coaches.html">Our Coaches</a>' section and 
+                                select the one the suits you best. 
                     		</p>
                         </div>
                     	<div class="clearfix"></div>
@@ -272,31 +273,36 @@
         <h2 class="section-heading" style="text-align: center;">Contact Us</h2>
         <hr class="intro-divider">
         <div class="col-lg-8 col-lg-offset-2">
-            <form class="contact-form" action="https://formspree.io/contact@pstemcoaching.com" method="POST">
+            <form class="contact-form" onsubmit="return submitContact()" action="https://formspree.io/contact@pstemcoaching.com" method="POST" id="contact-form">
                 <input type="hidden" name="_next" value="index.html">
                 <input type="text" name="_gotcha" style="display:none">
                 <div class="form-group col-lg-6" style="padding-left: 0px;">
                     <label for="first-name">First Name</label>
+                    <label for="first-name" class="error-label" id="error-label-first-name"></label>
                     <input type="text" class="form-control" id="first-name" placeholder="Enter first name">
                 </div>
                 <div class="form-group col-lg-6" style="padding-left: 0px; padding-right: 0px;">
                     <label for="last-name">Last Name</label>
+                    <label for="last-name" class="error-label" id="error-label-last-name"></label>
                     <input type="text" class="form-control" id="last-name" placeholder="Enter last name">
                 </div>
                 <div class="clearfix"></div>
                 <div class="form-group">
                     <label for="sender-email">Your email address</label>
+                    <label for="sender-email" class="error-label" id="error-label-email"></label>
                     <input type="email" name="email" class="form-control" id="sender-email" placeholder="Enter email">
                 </div>
                 <div class="form-group">
                     <label for="subject">Subject</label>
+                    <label for="subject" class="error-label" id="error-label-subject">*</label>
                     <input type="text" name="_subject" class="form-control" id="subject" placeholder="Enter subject">
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
+                    <label for="message" class="error-label" id="error-label-message">*</label>
                     <textarea name="message" class="form-control" id="message" rows="5" placeholder="Type your message..."></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" style="padding-left: 15px; padding-right: 15px;">Send</button>
+                <button type="submit" class="btn btn-primary" id="submit-button" style="padding-left: 15px; padding-right: 15px;">Send</button>
             </form>
         </div>
     </div>
@@ -372,6 +378,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script type="text/javascript" src="js/form-validation.js"></script>
 
 </body>
 

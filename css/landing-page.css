@@ -146,6 +146,11 @@ h6 {
     padding-bottom: 50px;
 }
 
+.error-label {
+    color: red;
+    float: right;
+}
+
 .banner {
     padding: 100px 0;
     color: #f8f8f8;

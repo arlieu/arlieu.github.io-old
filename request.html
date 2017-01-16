@@ -78,26 +78,31 @@
 		    <div class="clearfix"></div>
 			
 			<div class="row">
-				<div class="col-lg-5">
-					<form class="request-form" action="https://formspree.io/requests@pstemcoaching.com" method="POST">
+				<div class="col-lg-6">
+					<form class="request-form" onsubmit="return submitRequest()" action="https://formspree.io/requests@pstemcoaching.com" method="POST">
 						<input type="hidden" name="_next" value="index.html">
                         <input type="text" name="_gotcha" style="display:none">
 						<div class="form-group col-lg-6" style="padding-left: 0px;">
 							<label for="first-name">First Name</label>
+                            <label for="first-name" class="error-label" id="error-label-first-name">*</label>
 							<input type="text" class="form-control" id="first-name" placeholder="Enter first name">
 						</div>
 						<div class="form-group col-lg-6" style="padding-left: 0px; padding-right: 0px;">
 							<label for="last-name">Last Name</label>
+                            <label for="last-name" class="error-label" id="error-label-last-name">*</label>
 							<input type="text" class="form-control" id="last-name" placeholder="Enter last name">
 						</div>
 						<div class="clearfix"></div>
 						<div class="form-group">
 							<label for="sender-email">Your email address</label>
+                            <label for="sender-email" class="error-label" id="error-label-email">*</label>
 							<input type="email" name="email" class="form-control" id="sender-email" placeholder="Enter email">
 						</div>
 						<div class="form-group">
+                            <input type="hidden" name="_subject" id="_subject">
 							<label for="subject">Service</label>
-							<select name="_subject" class="form-control" id="subject">
+                            <label for="subject" class="error-label" id="error-label-subject">*</label>
+							<select name="subject" class="form-control" id="subject">
 								<option value="" disabled selected>Select a service</option>
 								<option value="Homework/Project Help">Homework/Project Help</option>
 								<option value="Test Preparation">Test Preparation</option>
@@ -201,6 +206,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script type="text/javascript" src="js/form-validation.js"></script>
 
 </body>
 </html>
