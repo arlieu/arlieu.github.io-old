@@ -63,6 +63,7 @@ function submitContact() {
 		messageValid = "Subject: " + subjectValid + "\n\n" + document.getElementById("message").value;
 		document.getElementById("message").value=messageValid;
 		alert("Message successfully sent!");
+		
 		return true;
 	}
 	else {
@@ -128,6 +129,7 @@ function submitRequest() {
 		messageValid = document.getElementById("message").value + "\n\n" + firstNameValid + " " + lastNameValid;
 		document.getElementById("message").value = messageValid;
 		alert("Message successfully sent!");
+		
 		return true;
 	}
 	else {
