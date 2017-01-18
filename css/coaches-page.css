@@ -11,9 +11,27 @@ h1, h4, h5, p, label {
     color: #f8f8f8;
 }
 
+.profile-row {
+    margin-top: 50px;
+}
+
 .coach-picture {
     border-radius: 50%;
     width: 150px;
+}
+
+@media(max-width:767px) {
+    .profile-row {
+        margin-top: 0px;
+    }
+
+    .coach-picture {
+        margin-top: 50px;
+    }
+
+    .first-coach {
+        margin-top: 10px;
+    }
 }
 
 .coach-bio {
@@ -49,13 +67,10 @@ h1, h4, h5, p, label {
     font-weight: lighter;
 }
 
-@media(max-width:992px) {
-    .coach-modal {
-        text-align: left;
-    }
-
+@media(max-width:767px) {
     .coach-picture-modal {
         display: block;
+        margin-top: 0px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -76,3 +91,4 @@ h1, h4, h5, p, label {
         font-weight: lighter;
     }
 }
+
