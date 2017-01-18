@@ -1,4 +1,4 @@
-h1, h4, p, label {
+h1, h4, h5, p, label {
     color: black;
 }
 
@@ -22,4 +22,57 @@ h1, h4, p, label {
     padding-right: 10px;
     font-size: 14;
     font-weight: lighter;
+}
+
+.coach-button {
+    display: block;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.coach-modal {
+    text-align: left;
+}
+
+.coach-title-modal {
+    display: inline;
+    float: left;
+    padding-top: 5px;
+    color: black;
+}
+
+.coach-cred {
+    clear: both;
+    display: block; 
+    float: left;
+    font-weight: lighter;
+}
+
+@media(max-width:992px) {
+    .coach-modal {
+        text-align: left;
+    }
+
+    .coach-picture-modal {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .coach-title-modal {
+        display: block;
+        float: none;
+        text-align: center;
+        padding-top: 5px;
+        color: black;
+    }
+
+    .coach-cred {
+        clear: both;
+        display: block; 
+        text-align: center;
+        float: none;
+        font-weight: lighter;
+    }
 }
