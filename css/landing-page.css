@@ -87,13 +87,16 @@ h6 {
 }
 
 .about-message {
-    margin: 0;
     font-size: 5em;
     color: black;
 }
 
 .about-self {
     text-align: left;
+}
+
+.break-row {
+    margin-bottom: 50px;
 }
 
 .profile-image {
@@ -103,6 +106,7 @@ h6 {
 
 .testimonial-message {
     text-align: left;
+    font-weight: lighter;
     font-size: 16px;
     color: #696969;
 }
@@ -112,6 +116,22 @@ h6 {
     color: #D3D3D3;
     font-style: italic;
     font-size: 16px;
+}
+
+@media(max-width: 991px) {
+    .break-row {
+        margin-bottom: 0px;
+    }
+
+    .signature {
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width: 767px) {
+    .service-button {
+        margin-bottom: 30px;
+    }
 }
 
 .network-name {
@@ -136,6 +156,10 @@ h6 {
     margin-bottom: 30px;
 }
 
+.section-heading-left {
+    float: left;
+}
+
 .section-heading-spacer {
     float: left;
     width: 200px;
@@ -144,6 +168,16 @@ h6 {
 
 .contact-form {
     padding-bottom: 50px;
+}
+
+.first-name-field {
+    padding-left: 0px; 
+    padding-right: 5px;
+}
+
+.last-name-field {
+    padding-left: 5px;
+    padding-right: 0px;
 }
 
 .error-label {

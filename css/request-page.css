@@ -15,9 +15,25 @@ h1, label {
     display: block;
 }
 
+.first-name-field {
+    padding-left: 0px;
+    padding-right: 5px;
+}
+
+.last-name-field {
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
 .request-instructions {
     margin-top: 10px;
     color: black;
+}
+
+@media(max-width:767px) {
+    .request-instructions {
+        margin-top: 20px;
+    }
 }
 
 .disclaimer {
