@@ -5,7 +5,6 @@ function submitContact() {
 			document.getElementById("error-label-first-name").innerHTML="*Alphabetical characters only";
 			return false;
 		}
-
 		document.getElementById("error-label-first-name").innerHTML="";
 		return true;
 	}
@@ -58,7 +57,6 @@ function submitContact() {
 	}
 
 	var check = [validFirstName(), validLastName(), validEmail(), validSubject(), validMessage()];
-
 	if (check[0] && check[1] && check[2] && check[3] && check[4]) {
 		messageValid = "Subject: " + subjectValid + "\n\n" + document.getElementById("message").value;
 		document.getElementById("message").value=messageValid;
