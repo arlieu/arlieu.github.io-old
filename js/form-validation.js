@@ -60,7 +60,8 @@ function submitContact() {
 	if (check[0] && check[1] && check[2] && check[3] && check[4]) {
 		messageValid = "Subject: " + subjectValid + "\n\n" + document.getElementById("message").value;
 		document.getElementById("message").value=messageValid;
-		alert("Message successfully sent!");
+		
+		alert("Message successfully sent! If you provided an email address, you should receive a reply within 24 hours.");
 		
 		return true;
 	}
@@ -126,7 +127,7 @@ function submitRequest() {
 	if (check[0] && check[1] && check[2] && check[3]) {
 		messageValid = document.getElementById("message").value + "\n\n" + firstNameValid + " " + lastNameValid;
 		document.getElementById("message").value = messageValid;
-		alert("Message successfully sent!");
+		alert("Message successfully sent! You should receive a reply within 24 hours.");
 		
 		return true;
 	}
