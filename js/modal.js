@@ -8,7 +8,7 @@ $('#coach-1').click(function () {
                                 "eventually, I was hired as a tutor for W&M. I then became fascinated with computer engineering, " + 
                                 "which led me to transfer to the University of Virginia to study computer engineering. I am now a " +  
                                 "senior at UVA and have been privately tutoring for the past couple years with great success. " +
-                                "Please feel free to check out some of my <a href='https://www.wyzant.com/Tutors/STEM-Avery'>student reviews</a>.";
+                                "Please feel free to check out some of my <a href='https://www.wyzant.com/Tutors/STEM-Avery' target='_blank'>student reviews</a>.";
 });
 
 $('#coach-2').click(function () {
