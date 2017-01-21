@@ -18,8 +18,18 @@ h6 {
 body {
     overflow-x: hidden;
 }
+
 .topnav {
     font-size: 14px; 
+}
+
+.selected-tab {
+    color: black;
+}
+
+a.selected-tab:hover {
+    text-decoration: none;
+    color: black;
 }
 
 .lead {
