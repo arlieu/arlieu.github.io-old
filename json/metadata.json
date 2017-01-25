@@ -1,0 +1,16 @@
+{
+	"@context": "http://schema.org",
+	"@type": "WebSite",
+	"url": "https://pstemcoaching.com",
+	"author": {
+		"@type": "Organization",
+		"name": "Private STEM Coaching",
+		"email": "contact@pstemcoaching.com"
+	},
+	"datePublished": "2017-01-14",
+	"description": "Do you need help with an assignment, preparing for an exam, 
+	or want to refine your skills/knowledge? Our coaches can help you do just 
+	that! Find one today!",
+	"copyrightHolder": "Private STEM Coaching",
+	"copyrightYear": "2017"
+}
