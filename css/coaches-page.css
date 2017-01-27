@@ -20,6 +20,15 @@ h1, h4, h5, p, label {
     width: 150px;
 }
 
+.bio-head {
+    float: left;
+}
+
+.bio {
+    clear: both; 
+    float: left;
+}
+
 @media(max-width:767px) {
     .profile-row {
         margin-top: 0px;
@@ -92,3 +101,10 @@ h1, h4, h5, p, label {
     }
 }
 
+.custom-modal-footer {
+    border: none;
+}
+
+.close-button {
+    color: black;
+}

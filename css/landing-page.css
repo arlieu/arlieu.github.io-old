@@ -64,6 +64,11 @@ a.selected-tab:hover {
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
+.about-testimonial-divider {
+    margin-bottom: 50px; 
+    margin-top: 0px;
+}
+
 .intro-message > h3 {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
@@ -183,6 +188,30 @@ a.selected-tab:hover {
     border-top: 3px solid #e7e7e7;
 }
 
+.testimonial-heading {
+    margin-bottom: 50px;
+}
+
+.testimonial-content-separator {
+    margin-bottom: 50px;
+}
+
+.picture-service-1 {
+    width: 75%;
+}
+
+.picture-service-2 {
+    width: 65%;
+}
+
+.contact-section {
+    padding-top: 50px;
+}
+
+.contact-section-heading {
+    text-align: center;
+}
+
 .contact-form {
     padding-bottom: 50px;
 }
@@ -197,9 +226,18 @@ a.selected-tab:hover {
     padding-right: 0px;
 }
 
+.hidden-input {
+    display:none;
+}
+
 .error-label {
     color: red;
     float: right;
+}
+
+.send-button {
+    padding-left: 15px; 
+    padding-right: 15px;
 }
 
 .banner {

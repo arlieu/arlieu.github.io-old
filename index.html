@@ -150,8 +150,8 @@
                     		</p>
                         </div>
                     	<div class="clearfix"></div>
-                    	<hr class="intro-divider" style="margin-bottom: 50px; margin-top: 0px;">
-                        <h2 class="section-heading" style="margin-bottom: 50px;">Testimonials</h2>
+                    	<hr class="intro-divider about-testimonial-divider">
+                        <h2 class="section-heading testimonial-heading">Testimonials</h2>
                     	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     		<h4>Great Experience</h4>
                     		<p class="testimonial-message">
@@ -205,7 +205,7 @@
 							</p>
 							<p class="signature">— Aaron</p>
                     	</div>
-                    	<div class="clearfix" style="margin-bottom: 50px;"></div>
+                    	<div class="clearfix testimonial-content-separator"></div>
                     </div>
                 </div>
             </div>
@@ -238,7 +238,7 @@
                     <a href="request"><button type="button" class="btn btn-warning service-button">Request Homework Help</button></a>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-2">
-                    <img class="img-responsive" src="img/homework.png" style="width: 75%;" alt="homework/project help">
+                    <img class="img-responsive picture-service-1" src="img/homework.png" alt="homework/project help">
                 </div>
             </div>
 
@@ -266,7 +266,7 @@
 
             <div class="row">
                 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12" id="test-service-1">
-                    <img class="img-responsive picture-service-2" src="img/exam.png" style="width: 65%;" alt="test preparation">
+                    <img class="img-responsive picture-service-2" src="img/exam.png" alt="test preparation">
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-2 col-xs-12" id="test-service-2">
                     <p class="lead">Have an upcoming test? Our coaches can help you prepare for course exams, AP Tests, SATs, and much more!</p>
@@ -314,13 +314,13 @@
 
 	<a  name="contact"></a>
     
-    <div class="container" style="padding-top: 50px;">
-        <h2 class="section-heading" style="text-align: center;">Contact Us</h2>
+    <div class="container contact-section">
+        <h2 class="section-heading contact-section-heading">Contact Us</h2>
         <hr class="intro-divider">
         <div class="col-lg-8 col-lg-offset-2">
             <form class="contact-form" onsubmit="return submitContact()" action="https://formspree.io/contact@pstemcoaching.com" method="POST" id="contact-form">
                 <input type="hidden" name="_next" value="index">
-                <input type="text" name="_gotcha" style="display:none">
+                <input type="text" name="_gotcha" class="hidden-input">
                 <div class="form-group first-name-field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <label for="first-name">First Name</label>
                     <label for="first-name" class="error-label" id="error-label-first-name"></label>
@@ -347,7 +347,7 @@
                     <label for="message" class="error-label" id="error-label-message">*</label>
                     <textarea name="message" class="form-control" id="message" rows="5" placeholder="Type your message..."></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" id="submit-button" style="padding-left: 15px; padding-right: 15px;">Send</button>
+                <button type="submit" class="btn btn-primary send-button" id="submit-button">Send</button>
             </form>
         </div>
     </div>
