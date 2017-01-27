@@ -105,6 +105,15 @@ h1, h4, h5, p, label {
     border: none;
 }
 
+.modal-send-button {
+    clear: both;
+    display: inline;
+    float: right;
+}
+
 .close-button {
+    display: inline;
+    float: right;
     color: black;
+    margin-right: 10px;
 }
