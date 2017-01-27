@@ -103,17 +103,17 @@ h1, h4, h5, p, label {
 
 .custom-modal-footer {
     border: none;
+    margin-top: 50px;
 }
 
 .modal-send-button {
-    clear: both;
     display: inline;
     float: right;
 }
 
 .close-button {
+    clear: both;
     display: inline;
-    float: right;
     color: black;
-    margin-right: 10px;
+    margin-right: 5px;
 }
