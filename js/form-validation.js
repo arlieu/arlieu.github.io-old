@@ -113,13 +113,12 @@ function submitRequest() {
 	}
 
 	function validSubject() {
-		var subject = document.getElementById("subject").value;
-		if (!subject) {
+		subjectSelection=document.getElementById("subject").value;
+		if (!subjectSelection) {
 			document.getElementById("error-label-subject").innerHTML="*Subject required";
 			return false;
 		}
 
-		subjectSelection=document.getElementById("subject").value;
 		document.getElementById("error-label-subject").innerHTML="*";
 		return true;
 	}
@@ -131,6 +130,7 @@ function submitRequest() {
 			return false;
 		}
 
+		document.getElementById("_subject").value=document.getElementById("service").value;
 		document.getElementById("error-label-service").innerHTML="*";
 		return true;
 	}
@@ -146,7 +146,6 @@ function submitRequest() {
 		"\n\n" + firstNameValid + " " + lastNameValid;
 		document.getElementById("message").value = messageValid;
 		alert("Message successfully sent! You should receive a reply within 24 hours.");
-		document.getElementById("_subject").value=document.getElementById("service").value;
 		return true;
 	}
 	else {
