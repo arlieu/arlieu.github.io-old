@@ -27,6 +27,7 @@ h1, h4, h5, p, label {
 .bio {
     clear: both; 
     float: left;
+    font-weight: lighter;
 }
 
 @media(max-width:767px) {

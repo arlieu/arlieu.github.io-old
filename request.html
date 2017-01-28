@@ -114,17 +114,31 @@
                             <label for="sender-email" class="error-label" id="error-label-email">*</label>
 							<input type="email" name="email" class="form-control" id="sender-email" placeholder="Enter email">
 						</div>
-						<div class="form-group">
-                            <input type="hidden" name="_subject" id="_subject">
-							<label for="subject">Service</label>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
                             <label for="subject" class="error-label" id="error-label-subject">*</label>
-							<select name="subject" class="form-control" id="subject">
+                            <input type="text" name="subject" class="form-control" id="subject" placeholder="Enter subject">
+                        </div>
+						<div class="form-group">
+                            <input type="hidden" name="_subject" id="_service">
+							<label for="service">Service</label>
+                            <label for="service" class="error-label" id="error-label-service">*</label>
+							<select name="service" class="form-control" id="service">
 								<option value="" disabled selected>Select a service</option>
 								<option value="Homework/Project Help">Homework/Project Help</option>
 								<option value="Test Preparation">Test Preparation</option>
 								<option value="Getting Ahead/Skill Mastery">Getting Ahead/Skill Mastery</option>
 							</select>
 						</div>
+                        <div class="form-group">
+                            <label for="coach-selection">Coach</label>
+                            <select name="coach-selection" class="form-control" id="coach-selection">
+                                <option value="" disabled selected>Select a coach</option>
+                                <option value="Kevin K.">Kevin K.</option>
+                                <option value="Avery L.">Avery L.</option>
+                                <option value="Jason S.">Jason S.</option>
+                            </select>
+                        </div>
 						<div class="form-group">
 							<label for="message">Additional information</label>
 							<textarea name="message" class="form-control" id="message" rows="5" placeholder="Type your message..."></textarea>

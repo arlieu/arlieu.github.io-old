@@ -74,6 +74,7 @@ function submitRequest() {
 	var firstNameValid = "";
 	var lastNameValid = "";
 	var messageValid = "";
+	var coachSelection = null;
 
 	function validFirstName() {
 		var firstName = document.getElementById("first-name").value;
@@ -113,19 +114,35 @@ function submitRequest() {
 	function validSubject() {
 		var subject = document.getElementById("subject").value;
 		if (!subject) {
-			document.getElementById("error-label-subject").innerHTML="*Select service";
+			document.getElementById("error-label-subject").innerHTML="*Subject required";
 			return false;
 		}
 
-		document.getElementById("_subject").value=document.getElementById("subject").value
+		document.getElementById("_subject").value=document.getElementById("subject").value;
 		document.getElementById("error-label-subject").innerHTML="*";
 		return true;
 	}
 
-	var check = [validFirstName(), validLastName(), validEmail(), validSubject()];
+	function validService() {
+		var service = document.getElementById("service").value;
+		if (!service) {
+			document.getElementById("error-label-service").innerHTML="*Select a service";
+			return false;
+		}
 
-	if (check[0] && check[1] && check[2] && check[3]) {
-		messageValid = document.getElementById("message").value + "\n\n" + firstNameValid + " " + lastNameValid;
+		document.getElementById("_subject").value+=" - "+document.getElementById("service").value;
+		document.getElementById("error-label-service").innerHTML="*";
+		return true;
+	}
+
+	function validCoach() {
+		coachSelection = document.getElementById("coach").value;
+	}
+
+	var check = [validFirstName(), validLastName(), validEmail(), validSubject(), validService()];
+
+	if (check[0] && check[1] && check[2] && check[3] && check[4]) {
+		messageValid = "Requested Coach: " + coachSelection + "\n\n" + document.getElementById("message").value + "\n\n" + firstNameValid + " " + lastNameValid;
 		document.getElementById("message").value = messageValid;
 		alert("Message successfully sent! You should receive a reply within 24 hours.");
 		
