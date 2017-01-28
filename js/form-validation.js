@@ -74,6 +74,7 @@ function submitRequest() {
 	var firstNameValid = "";
 	var lastNameValid = "";
 	var messageValid = "";
+	var subjectSelection = null;
 	var coachSelection = null;
 
 	function validFirstName() {
@@ -118,7 +119,7 @@ function submitRequest() {
 			return false;
 		}
 
-		document.getElementById("_subject").value=document.getElementById("subject").value;
+		subjectSelection=document.getElementById("subject").value;
 		document.getElementById("error-label-subject").innerHTML="*";
 		return true;
 	}
@@ -130,7 +131,6 @@ function submitRequest() {
 			return false;
 		}
 
-		document.getElementById("_subject").value+=" - "+document.getElementById("service").value;
 		document.getElementById("error-label-service").innerHTML="*";
 		return true;
 	}
@@ -142,10 +142,11 @@ function submitRequest() {
 	var check = [validFirstName(), validLastName(), validEmail(), validSubject(), validService()];
 
 	if (check[0] && check[1] && check[2] && check[3] && check[4]) {
-		messageValid = "Requested Coach: " + coachSelection + "\n\n" + document.getElementById("message").value + "\n\n" + firstNameValid + " " + lastNameValid;
+		messageValid = "Subject: " + subjectSelection + "\n\n" + "Requested Coach: " + coachSelection + "\n\n" + document.getElementById("message").value + 
+		"\n\n" + firstNameValid + " " + lastNameValid;
 		document.getElementById("message").value = messageValid;
 		alert("Message successfully sent! You should receive a reply within 24 hours.");
-		
+		document.getElementById("_subject").value=document.getElementById("service").value;
 		return true;
 	}
 	else {
