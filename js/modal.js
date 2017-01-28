@@ -6,7 +6,7 @@ $('#coach-1').click(function () {
 	document.getElementById('coach-bio-p1').innerHTML="I have been tutoring high school to college-level STEM subjects for the past few years now, " +
 								"and over that time, I have successfully taught a range of students with different backgrounds and goals. " + 
 								"I recognize that each student is unique and pride myself on catering to all of my students' individual needs and preferences. " +
-								"Please feel free to check out some of my past <a href= 'https://www.wyzant.com/Tutors/STEM-Avery'>student ratings</a>.";
+								"Please feel free to check out some of my past <a href='https://www.wyzant.com/Tutors/STEM-Avery' target='_blank'>student ratings/ratings</a>.";
     document.getElementById('coach-bio-p2').innerHTML="To give you a little background, I started off double majoring in computer science and applied math " + 
     							"at the College of William & Mary. During my free time, I would volunteer as a tutor for public schools in Williamsburg, VA, " + 
     							"and eventually, I was hired as a tutor for the College of William and Mary. " + 
