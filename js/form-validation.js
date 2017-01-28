@@ -113,7 +113,7 @@ function submitRequest() {
 	}
 
 	function validSubject() {
-		subjectSelection=document.getElementById("subject").value;
+		subjectSelection=document.getElementById("topic").value;
 		if (!subjectSelection) {
 			document.getElementById("error-label-subject").innerHTML="*Subject required";
 			return false;
