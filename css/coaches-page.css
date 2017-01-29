@@ -104,17 +104,28 @@ h1, h4, h5, p, label {
 
 .custom-modal-footer {
     border: none;
-    margin-top: 50px;
+}
+
+.coach-subjects-head {
+    clear: both;
+    float: left;
+
+}
+
+.coach-subjects {
+    float: left;
+    display: block;
+    font-weight: lighter;
 }
 
 .modal-send-button {
-    display: inline;
+    display: inline-block;
     float: right;
 }
 
 .close-button {
     clear: both;
-    display: inline;
+    display: inline-block;
     color: black;
     margin-right: 5px;
 }

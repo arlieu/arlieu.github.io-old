@@ -3,19 +3,21 @@ $('#coach-1').click(function () {
 	document.getElementById('coachModalLabel').innerHTML=document.getElementById('coach-1').innerHTML;
 	document.getElementById('major').innerHTML="Computer Engineering";
 	document.getElementById('school').innerHTML="University of Virginia";
-	document.getElementById('coach-bio-p1').innerHTML="I have been tutoring high school to college-level STEM subjects for the past few years now, " +
-								"and over that time, I have successfully taught a range of students with different backgrounds and goals. " + 
-								"I recognize that each student is unique and pride myself on catering to all of my students' individual needs and preferences. " +
+	document.getElementById('coach-bio-p1').innerHTML="I have been tutoring high school to college-level STEM subjects for the past few years, " +
+								"and over that time, I have taught a range of students with different backgrounds and goals. " + 
+								"I recognize that each student is unique and pride myself on catering to all of my students' individual needs. " +
 								"Please feel free to check out some of my past <a href='https://www.wyzant.com/Tutors/STEM-Avery' target='_blank'>student ratings/reviews</a>.";
     document.getElementById('coach-bio-p2').innerHTML="To give you a little background, I started off double majoring in computer science and applied math " + 
     							"at the College of William & Mary. During my free time, I would volunteer as a tutor for public schools in Williamsburg, VA, " + 
-    							"and eventually, I was hired as a tutor for the College of William and Mary. " + 
-    							"Later on, I became fascinated with computer engineering concepts, which led me to transfer to the University of Virginia. " + 
+    							"and eventually, I was hired as a tutor for the College of William & Mary. " + 
+    							"Later on, I became fascinated with computer engineering, which led me to transfer to the University of Virginia. " + 
     							"Currently, I am a senior studying computer engineering at the University of Virginia. ";
-    document.getElementById('coach-bio-p3').innerHTML="As an engineering undergraduate, I know how math and science subjects build on themselves, " + 
+    document.getElementById('coach-bio-p3').innerHTML="As an engineering undergraduate, I know how math and science build on themselves, " + 
     							"so it's important to me that my students truly grasp their material. " + 
     							"Because of that, I try to make that material as relatable as possible. " + 
-    							"I believe that learning math and science can be very rewarding, and I will work very hard to help my students succeed. ";
+    							"I believe that learning math and science can be very rewarding, and I will work hard to help my students succeed.";
+    document.getElementById("coach-subjects").innerHTML="object oriented programming, data structures, algorithms, web development, databases," +
+    							"algebra, geometry, trigonometry, precalculus, calculus, differential equations, probability, linear algebra, physics, SAT prep";				
 });
 
 $('#coach-2').click(function () {
@@ -32,6 +34,7 @@ $('#coach-2').click(function () {
 								"I am very passionate about my work and the fields of visual effects and animation, so it is my top prioirty to share " +
 								"my passion with others and to make sure they excel.";
 	document.getElementById('coach-bio-p3').innerHTML="";
+	document.getElementById("coach-subjects").innerHTML="";	
 });
 
 $('#coach-3').click(function () {
@@ -46,6 +49,8 @@ $('#coach-3').click(function () {
 								"I have the experience necessary to guide my students through all of the most common issues they'll face and " + 
 								"the know-how to quickly find solutions to the most uncommon issues.";
 	document.getElementById('coach-bio-p3').innerHTML="";
+	document.getElementById("coach-subjects").innerHTML="object oriented programming, data structures, algorithms, databases, data flow programming, " +
+							"circuit design, physics, calculus, differential equations, precalculus, trigonometry, precalculus";	
 });
 
 $('#coach-4').click(function () {
@@ -56,6 +61,7 @@ $('#coach-4').click(function () {
 	document.getElementById('coach-bio-p1').innerHTML="Coaches add descriptions highlighting their skills, qualifications, and background here.";
 	document.getElementById('coach-bio-p2').innerHTML="";
 	document.getElementById('coach-bio-p3').innerHTML="";
+	document.getElementById("coach-subjects").innerHTML="";	
 });
 
 $('#coach-5').click(function () {
@@ -66,4 +72,5 @@ $('#coach-5').click(function () {
 	document.getElementById('coach-bio-p1').innerHTML="Coaches add descriptions highlighting their skills, qualifications, and background here.";
 	document.getElementById('coach-bio-p2').innerHTML="";
 	document.getElementById('coach-bio-p3').innerHTML="";
+	document.getElementById("coach-subjects").innerHTML="";
 });
