@@ -72,10 +72,20 @@ $('#coach-4').click(function () {
 $('#coach-5').click(function () {
 	document.getElementById('coach-picture-modal').src=document.getElementById('coach-picture-5').src;
 	document.getElementById('coachModalLabel').innerHTML=document.getElementById('coach-5').innerHTML;
-	document.getElementById('major').innerHTML="Major";
-	document.getElementById('school').innerHTML="School";
-	document.getElementById('coach-bio-p1').innerHTML="Coaches add descriptions highlighting their skills, qualifications, and background here.";
-	document.getElementById('coach-bio-p2').innerHTML="";
+	document.getElementById('major').innerHTML="Mathematics";
+	document.getElementById('school').innerHTML="College of William & Mary";
+	document.getElementById('coach-bio-p1').innerHTML="I’m a senior at the College of William and Mary majoring in Mathematics and minoring in Psychology. " + 
+							"I have a passion for mathematics, especially in the strand of Calculus, but also wanted to be able to determine how people " +
+							"learn and improve in new areas, which is where psychology came in. Beyond my undergraduate degree, " +
+							"I plan to pursue a doctorate in mathematics with a concentration in education to become a professor. " +
+							"In becoming an educator, I believe it is equally important to have both thorough knowledge of the content and " +
+							"exemplary pedagogy to teach it.";
+	document.getElementById('coach-bio-p2').innerHTML="Throughout my college career I have been volunteering in K-12 classrooms, including both " +
+							"tutoring and assisting in the classroom lessons. I have also done extensive research in the area of math education, accruing " +
+							"a knowledge base of teaching methods that are effective and customizable to each student. With my experience in both " +
+							"advanced mathematics and educational research, I feel qualified to assist students in truly understanding and " +
+							"enjoying mathematics.";
 	document.getElementById('coach-bio-p3').innerHTML="";
-	document.getElementById("coach-subjects").innerHTML="";
+
+	document.getElementById("coach-subjects").innerHTML="elementary math, algebra, geometry, trigonometry, precalculus, calculus, differential equations";
 });
