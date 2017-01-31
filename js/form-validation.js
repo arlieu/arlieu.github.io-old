@@ -1,16 +1,25 @@
 function submitContact() {
 	function validFirstName() {
 		var firstName = document.getElementById("first-name").value;
+		if (!/^\s*$/.test(firstName)) {
+			firstName = firstName.replace(/\s/g, "");
+		}
+
 		if (!/^[A-Za-z]+$/.test(firstName) && !/^\s*$/.test(firstName)) {
 			document.getElementById("error-label-first-name").innerHTML="*Alphabetical characters only";
 			return false;
 		}
+
 		document.getElementById("error-label-first-name").innerHTML="";
 		return true;
 	}
 
 	function validLastName() {
 		var lastName = document.getElementById("last-name").value;
+		if (!/^\s*$/.test(lastName)) {
+			lastName = lastName.replace(/\s/g, "");
+		}
+
 		if (!/^[A-Za-z]+$/.test(lastName) && !/^\s*$/.test(lastName)) {
 			document.getElementById("error-label-last-name").innerHTML="*Alphabetical characters only";
 			return false;
@@ -60,9 +69,8 @@ function submitContact() {
 	if (check[0] && check[1] && check[2] && check[3] && check[4]) {
 		messageValid = "Subject: " + subjectValid + "\n\n" + document.getElementById("message").value;
 		document.getElementById("message").value=messageValid;
-		
+		document.getElementById("contact-form").setAttribute("action", "https://formspree.io/" + "contact" + "@" + "pstemcoaching" + ".com");
 		alert("Message successfully sent! If you provided an email address, you should receive a reply within 24 hours.");
-		
 		return true;
 	}
 	else {
@@ -79,6 +87,7 @@ function submitRequest() {
 
 	function validFirstName() {
 		var firstName = document.getElementById("first-name").value;
+		firstName = firstName.replace(/\s/g, "");
 		if (!/^[A-Za-z]+$/.test(firstName)) {
 			document.getElementById("error-label-first-name").innerHTML="*Alphabetical characters only";
 			return false;
@@ -91,6 +100,7 @@ function submitRequest() {
 
 	function validLastName() {
 		var lastName = document.getElementById("last-name").value;
+		lastName = lastName.replace(/\s/g, "");
 		if (!/^[A-Za-z]+$/.test(lastName)) {
 			document.getElementById("error-label-last-name").innerHTML="*Alphabetical characters only";
 			return false;
@@ -136,15 +146,16 @@ function submitRequest() {
 	}
 
 	function validCoach() {
-		coachSelection = document.getElementById("coach").value;
+		coachSelection = document.getElementById("coach-selection").value;
 	}
 
 	var check = [validFirstName(), validLastName(), validEmail(), validSubject(), validService()];
 
 	if (check[0] && check[1] && check[2] && check[3] && check[4]) {
-		messageValid = "Subject: " + subjectSelection + "\n\n" + "Requested Coach: " + coachSelection + "\n\n" + document.getElementById("message").value + 
+		messageValid = "Requested Subject: " + subjectSelection + "\n\n" + "Requested Coach: " + coachSelection + "\n\n" + document.getElementById("message").value + 
 		"\n\n" + firstNameValid + " " + lastNameValid;
 		document.getElementById("message").value = messageValid;
+		document.getElementById("request-form").setAttribute("action", "https://formspree.io/" + "requests" + "@" + "pstemcoaching" + ".com");
 		alert("Message successfully sent! You should receive a reply within 24 hours.");
 		return true;
 	}
