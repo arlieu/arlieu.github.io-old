@@ -123,6 +123,15 @@ a.selected-tab:hover {
     width: 100px;
 }
 
+.how-it-works-1 {
+    text-align: left;
+}
+
+.how-it-works-2 {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
 .testimonial-message {
     text-align: left;
     font-weight: lighter;
