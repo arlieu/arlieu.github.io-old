@@ -17,7 +17,8 @@ $('#coach-1').click(function () {
     							"Because of that, I try to make that material as relatable as possible. " + 
     							"I believe that learning math and science can be very rewarding, and I will work hard to help my students succeed.";
     document.getElementById("coach-subjects").innerHTML="object oriented programming (Python, C#, C++), data structures, algorithms, web development, databases," +
-    							"algebra, geometry, trigonometry, precalculus, calculus, differential equations, probability, linear algebra, physics, SAT prep";				
+    							"algebra, geometry, trigonometry, precalculus, calculus, differential equations, probability, linear algebra, physics, SAT prep";	
+    document.getElementById("request-button").innerHTML="Request " + document.getElementById('coach-1').innerHTML;			
 });
 
 $('#coach-2').click(function () {
@@ -35,6 +36,7 @@ $('#coach-2').click(function () {
 								"my passion with others and to make sure they excel.";
 	document.getElementById('coach-bio-p3').innerHTML="";
 	document.getElementById("coach-subjects").innerHTML="motion graphics, design, animation, After Effects, Cinema 4D, Chinese";	
+	document.getElementById("request-button").innerHTML="Request " + document.getElementById('coach-2').innerHTML;
 });
 
 $('#coach-3').click(function () {
@@ -51,6 +53,7 @@ $('#coach-3').click(function () {
 	document.getElementById('coach-bio-p3').innerHTML="";
 	document.getElementById("coach-subjects").innerHTML="object oriented programming (Java, Python, C++), data structures, algorithms, databases, data flow programming, " +
 							"circuit design, physics, calculus, differential equations, precalculus, trigonometry, precalculus";	
+	document.getElementById("request-button").innerHTML="Request " + document.getElementById('coach-3').innerHTML;
 });
 
 $('#coach-4').click(function () {
@@ -67,6 +70,7 @@ $('#coach-4').click(function () {
 							"explain new concepts as simply as possible. ";
 	document.getElementById('coach-bio-p3').innerHTML="";
 	document.getElementById("coach-subjects").innerHTML="object oriented programming (Java, Python, C++), algebra, precalculus, calculus";	
+	document.getElementById("request-button").innerHTML="Request " + document.getElementById('coach-4').innerHTML;
 });
 
 $('#coach-5').click(function () {
@@ -86,6 +90,14 @@ $('#coach-5').click(function () {
 							"advanced mathematics and educational research, I feel qualified to assist students in truly understanding and " +
 							"enjoying mathematics.";
 	document.getElementById('coach-bio-p3').innerHTML="";
-
 	document.getElementById("coach-subjects").innerHTML="elementary math, algebra, geometry, trigonometry, precalculus, calculus, differential equations";
+	document.getElementById("request-button").innerHTML="Request " + document.getElementById('coach-5').innerHTML;
 });
+
+
+function directMessage() {
+	var coach=document.getElementById("coachModalLabel").innerHTML;
+	coach=coach.replace(/\./g, '');
+	coach=coach.replace(/ /g, '_');
+	window.location.replace("https://pstemcoaching.com/request?coach="+coach);
+}

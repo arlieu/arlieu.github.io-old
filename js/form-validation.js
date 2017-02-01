@@ -78,6 +78,7 @@ function submitContact() {
 	}
 }
 
+
 function submitRequest() {
 	var firstNameValid = "";
 	var lastNameValid = "";
