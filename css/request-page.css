@@ -26,17 +26,29 @@ h1, label {
 }
 
 .request-instructions {
-    margin-top: 10px;
     color: black;
+    display: inline;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.inline-asterisk {
+    display: inline;
+    color: red;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 @media(max-width:767px) {
-    .request-instructions {
-        margin-top: 20px;
+    .submit-button {
+        display: block;
+        margin-bottom: 10px;
     }
 }
 
 .disclaimer {
+    display: block;
+    margin-top: 15px;
     font-weight: lighter;
     color: orange;
 }
