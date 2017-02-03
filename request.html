@@ -102,12 +102,12 @@
 						<div class="form-group first-name-field col-lg-6 col-md-6 col-sm-6 col-xs-6">
 							<label for="first-name" class="name-label">First Name</label>
                             <label for="first-name" class="error-label error-label-name" id="error-label-first-name">*</label>
-							<input type="text" class="form-control" id="first-name" placeholder="Enter first name">
+							<input type="text" name="first-name" class="form-control" id="first-name" placeholder="Enter first name">
 						</div>
 						<div class="form-group last-name-field col-lg-6 col-md-6 col-sm-6 col-xs-6">
 							<label for="last-name" class="name-label">Last Name</label>
                             <label for="last-name" class="error-label error-label-name" id="error-label-last-name">*</label>
-							<input type="text" class="form-control" id="last-name" placeholder="Enter last name">
+							<input type="text" name="last-name" class="form-control" id="last-name" placeholder="Enter last name">
 						</div>
 						<div class="form-group">
 							<label for="sender-email">Your Email Address</label>
@@ -115,15 +115,40 @@
 							<input type="email" name="email" class="form-control" id="sender-email" placeholder="Enter email">
 						</div>
                         <div class="form-group">
+                            <label>Payment Method</label>
+                            <label class="error-label" id="error-label-payment-method">*</label>
+                            <div class="row">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-10">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                            <label for="payment-method-1" class="form-check-label payment-button">
+                                                <input type="radio" onclick="validPaymentMethod()" name="payment-method" class="form-check-input" id="payment-method-1" value="$">
+                                                Square Cash
+                                            </label>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                            <label for="payment-method-2" class="form-check-label payment-button">
+                                                <input type="radio" onclick="validPaymentMethod()" name="payment-method" class="form-check-input" id="payment-method-2" value="@">
+                                                Venmo
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <label for="payment-username" class="payment-username-label" id="payment-username-label"></label>
+                            <label for="payment-username" class="error-label payment-username-label" id="error-label-payment-username">*</label>
+                            <input type="hidden" name="payment-username" class="form-control" id="payment-username">
+                        </div>
+                        <div class="form-group">
                             <label for="topic">Subject</label>
                             <label for="topic" class="error-label" id="error-label-subject">*</label>
-                            <input type="text" name="topic" class="form-control" id="topic" placeholder="Enter subject">
+                            <input type="text" name="subject" class="form-control" id="topic" placeholder="Enter subject">
                         </div>
 						<div class="form-group">
                             <input type="hidden" name="_subject" id="_subject">
 							<label for="service">Service</label>
                             <label for="service" class="error-label" id="error-label-service">*</label>
-							<select name="service" class="form-control" id="service">
+							<select name="_subject" class="form-control" id="service">
 								<option value="" disabled selected>Select a service</option>
 								<option value="Homework/Project Help">Homework/Project Help</option>
 								<option value="Test Preparation">Test Preparation</option>
@@ -132,7 +157,7 @@
 						</div>
                         <div class="form-group">
                             <label for="coach-selection">Coach</label>
-                            <select name="coach-selection" class="form-control" id="coach-selection">
+                            <select name="coach" class="form-control" id="coach-selection">
                                 <option value="" disabled selected>Select a coach</option>
                                 <option value="Kevin K.">Kevin K.</option>
                                 <option value="Owen K.">Owen K.</option>
@@ -143,7 +168,7 @@
                         </div>
 						<div class="form-group">
 							<label for="message">Additional information</label>
-							<textarea name="message" class="form-control" id="message" rows="5" placeholder="Type your message..."></textarea>
+							<textarea name="message" class="form-control" id="message" rows="10" placeholder="Type your message..."></textarea>
 						</div>
 						<button type="submit" class="btn btn-primary submit-button">Send</button>
 					</form>

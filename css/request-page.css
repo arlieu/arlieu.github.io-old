@@ -25,6 +25,15 @@ h1, label {
     padding-right: 0px;
 }
 
+.payment-button {
+    font-weight: lighter;
+}
+
+.payment-username-label {
+    margin-top: 5px;
+    display: none;
+}
+
 .request-instructions {
     color: black;
     display: inline;

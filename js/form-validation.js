@@ -95,6 +95,22 @@ function submitContact() {
 }
 
 
+function validPaymentMethod() {
+	if (document.getElementById("payment-method-1").checked) {
+		document.getElementById("payment-username-label").innerHTML="Your Square Cash Username";
+		document.getElementById("payment-username-label").style.display="inline-block";
+		document.getElementById("payment-username").name="Square Cash Username";
+		document.getElementById("payment-username").type="text";
+	}
+	else if (document.getElementById("payment-method-2").checked) {
+		document.getElementById("payment-username-label").innerHTML="Your Venmo Username";
+		document.getElementById("payment-username-label").style.display="inline-block";
+		document.getElementById("payment-username").name="Venmo Username";
+		document.getElementById("payment-username").type="text";
+	}
+}
+
+
 function submitRequest() {
 	var firstNameValid = "";
 	var lastNameValid = "";
@@ -139,6 +155,38 @@ function submitRequest() {
 		return true;
 	}
 
+	function validPaymentOption() {
+		if (!document.getElementById("payment-method-1").checked && !document.getElementById("payment-method-2").checked) {
+			document.getElementById("error-label-payment-method").innerHTML="*Payment method required";
+			return false;
+		}
+
+		document.getElementById("error-label-payment-method").innerHTML="*";
+		return true;
+	}
+
+	function validPaymentUsername() {
+		if (validPaymentOption()) {
+			var paymentUsername=document.getElementById("payment-username").value.replace(/\s/g, "");
+			if (paymentUsername.length==0) {
+				document.getElementById("payment-username-label").style.display="inline-block";
+				document.getElementById("error-label-payment-username").style.display="inline";
+				document.getElementById("error-label-payment-username").innerHTML="*Username required";
+				return false;
+			}
+
+			document.getElementById("payment-username-label").style.display="inline-block";
+			document.getElementById("error-label-payment-username").style.display="inline";
+			document.getElementById("error-label-payment-username").innerHTML="*";
+			return true
+		}
+
+		document.getElementById("payment-username-label").style.display="none";
+		document.getElementById("error-label-payment-username").style.display="none";
+		document.getElementById("error-label-payment-username").innerHTML="*";
+		return false;
+	}
+
 	function validSubject() {
 		subjectSelection=document.getElementById("topic").value;
 		if (!subjectSelection) {
@@ -166,9 +214,9 @@ function submitRequest() {
 		coachSelection = document.getElementById("coach-selection").value;
 	}
 
-	var check = [validFirstName(), validLastName(), validEmail(), validSubject(), validService()];
+	var check = [validFirstName(), validLastName(), validEmail(), validPaymentOption(), validPaymentUsername(), validSubject(), validService()];
 
-	if (check[0] && check[1] && check[2] && check[3] && check[4]) {
+	if (check[0] && check[1] && check[2] && check[3] && check[4] && check[5] && check[6]) {
 		messageValid = "Requested Subject: " + subjectSelection + "\n\n" + "Requested Coach: " + coachSelection + "\n\n" + document.getElementById("message").value + 
 		"\n\n" + firstNameValid + " " + lastNameValid;
 		document.getElementById("message").value = messageValid;
