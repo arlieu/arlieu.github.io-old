@@ -128,9 +128,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="about-message">
-                        <h1>About</h1>
-                        <img src="img/owner-profile.jpg" alt="owner" class="profile-image">
+                        <h2>About</h2>
                         <hr class="intro-divider">
+                        <img src="img/owner-profile.jpg" alt="owner" class="profile-image">
                         <div class="row">
                             <div class="col-lg-5 col-lg-offset-1 col-md-6 col-sm-6">
                             	<p class="lead about-self">
@@ -150,8 +150,7 @@
                             <div class="col-lg-1"></div>
                         </div>
                         <div class="clearfix"></div>
-                        <hr class="intro-divider about-testimonial-divider">
-                        <h2 class="section-heading testimonial-heading">How it Works</h2>
+                        <h3 class="section-heading testimonial-heading">How it Works</h3>
                         <div class="row">
                             <div class="col-lg-5 col-lg-offset-1 col-md-6 col-sm-6 col-xs-12">
                                 <p class="lead how-it-works-1">
@@ -170,7 +169,7 @@
                             <div class="col-lg-1"></div>
                             <div class="clearfix"></div>
                         </div>
-                        <h2 class="section-heading testimonial-heading">Testimonials</h2>
+                        <h3 class="section-heading testimonial-heading">Testimonials</h3>
                     	<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     		<h4>Great Experience</h4>
                     		<p class="testimonial-message">
@@ -254,7 +253,7 @@
             <div class="row">
                 <div class="col-lg-5 col-md-5 col-sm-5">
                     <p class="lead">Need homework or project help? Our coaches can assist you with a wide range of STEM subjects!</p>
-                    <a href="request"><button type="button" class="btn btn-warning service-button">Request Homework Help</button></a>
+                    <a href="request?service=Homework_Help"><button type="button" class="btn btn-warning service-button">Request Homework Help</button></a>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-2"></div>
                 <div class="col-lg-5 col-md-5 col-sm-5">
@@ -290,7 +289,7 @@
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-2 col-xs-12" id="test-service-2">
                     <p class="lead">Have an upcoming test? Our coaches can help you prepare for course exams, AP Tests, SATs, and much more!</p>
-                    <a href="request"><button type="button" class="btn btn-warning service-button">Request Test Prep</button></a>
+                    <a href="request?service=Test_Prep"><button type="button" class="btn btn-warning service-button">Request Test Prep</button></a>
                 </div>
             </div>
 
@@ -319,7 +318,7 @@
             <div class="row">
                 <div class="col-lg-5 col-md-5 col-sm-5">
                     <p class="lead">Want to get ahead or refine your skills? Our coaches can help elevate your knowledge and skills to the next level!</p>
-                    <a href="request"><button type="button" class="btn btn-warning service-button">Request Advanced Coaching</button></a>
+                    <a href="request?service=Advanced_Coaching"><button type="button" class="btn btn-warning service-button">Request Advanced Coaching</button></a>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-2"></div>
                 <div class="col-lg-5 col-md-5 col-sm-5">
@@ -336,50 +335,59 @@
 	<a  name="contact"></a>
     
     <div class="container contact-section">
+        <hr class="section-heading-spacer">
+        <div class="clearfix"></div>
         <h2 class="section-heading contact-section-heading">Contact Us</h2>
-        <hr class="intro-divider">
-        <div class="col-lg-8 col-lg-offset-2">
-            <form class="contact-form" onsubmit="return submitContact()" method="POST" id="contact-form">
-                <input type="hidden" name="_next" value="index">
-                <input type="text" name="_gotcha" class="hidden-input">
-                <div class="form-group first-name-field col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <label for="first-name">First Name</label>
-                    <label for="first-name" class="error-label" id="error-label-first-name"></label>
-                    <input type="text" class="form-control" id="first-name" placeholder="Enter first name">
-                </div>
-                <div class="form-group last-name-field col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <label for="last-name">Last Name</label>
-                    <label for="last-name" class="error-label" id="error-label-last-name"></label>
-                    <input type="text" class="form-control" id="last-name" placeholder="Enter last name">
-                </div>
-                <div class="clearfix"></div>
-                <div class="form-group">
-                    <label for="sender-email">Your email address</label>
-                    <label for="sender-email" class="error-label" id="error-label-email"></label>
-                    <input type="email" name="email" class="form-control" id="sender-email" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <label for="subject" class="error-label" id="error-label-subject">*</label>
-                    <input type="text" name="_subject" class="form-control" id="subject" placeholder="Enter subject">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <label for="message" class="error-label" id="error-label-message">*</label>
-                    <textarea name="message" class="form-control" id="message" rows="5" placeholder="Type your message..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary send-button" id="submit-button">Send</button>
-            </form>
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+            <p class="lead">
+                Have a question? Want to leave feedback? We would be happy to answer any questions and hear your feedback!
+                Fill out our contact form, and if you provide an email, our team will get
+                back to you soon. 
+            </p>
+            </div>
+            <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-12">
+                <form class="contact-form" onsubmit="return submitContact()" method="POST" id="contact-form">
+                    <input type="hidden" name="_next" value="index">
+                    <input type="text" name="_gotcha" class="hidden-input">
+                    <div class="form-group first-name-field col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <label for="first-name" class="name-label">First Name</label>
+                        <label for="first-name" class="error-label error-label-name" id="error-label-first-name"></label>
+                        <input type="text" class="form-control" id="first-name" placeholder="Enter first name">
+                    </div>
+                    <div class="form-group last-name-field col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <label for="last-name" class="name-label">Last Name</label>
+                        <label for="last-name" class="error-label error-label-name" id="error-label-last-name"></label>
+                        <input type="text" class="form-control" id="last-name" placeholder="Enter last name">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <label for="sender-email">Your Email Address</label>
+                        <label for="sender-email" class="error-label" id="error-label-email"></label>
+                        <input type="email" name="email" class="form-control" id="sender-email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <label for="subject" class="error-label" id="error-label-subject">*</label>
+                        <input type="text" name="_subject" class="form-control" id="subject" placeholder="Enter subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <label for="message" class="error-label" id="error-label-message">*</label>
+                        <textarea name="message" class="form-control" id="message" rows="5" placeholder="Type your message..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary send-button" id="submit-button">Send</button>
+                </form>
+            </div>
         </div>
     </div>
-
     <div class="banner">
 
         <div class="container">
 
             <div class="row">
                 <div class="col-lg-6">
-                    <h2>Connect to PSTEM Coaching:</h2>
+                    <h2>Connect with Us:</h2>
                 </div>
                 <div class="col-lg-6">
                     <ul class="list-inline banner-social-buttons">

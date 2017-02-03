@@ -66,6 +66,22 @@ function submitContact() {
 	}
 
 	var check = [validFirstName(), validLastName(), validEmail(), validSubject(), validMessage()];
+
+	if (!validFirstName() && !validLastName()) {
+		document.getElementById("error-label-first-name").style.color="red";
+		document.getElementById("error-label-last-name").style.color="red";
+	}
+	else if (!validFirstName() && validLastName()) {
+		document.getElementById("error-label-last-name").style.color="red";
+		document.getElementById("error-label-last-name").style.color="white";
+		document.getElementById("error-label-last-name").innerHTML="*";
+	}
+	else if (validFirstName() && !validLastName()) {
+		document.getElementById("error-label-first-name").style.color="red";
+		document.getElementById("error-label-first-name").style.color="white";
+		document.getElementById("error-label-first-name").innerHTML="*";
+	}
+
 	if (check[0] && check[1] && check[2] && check[3] && check[4]) {
 		messageValid = "Subject: " + subjectValid + "\n\n" + document.getElementById("message").value;
 		document.getElementById("message").value=messageValid;

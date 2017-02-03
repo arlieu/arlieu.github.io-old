@@ -121,6 +121,7 @@ a.selected-tab:hover {
 .profile-image {
     border-radius: 50%;
     width: 100px;
+    margin-bottom: 20px;
 }
 
 .how-it-works-1 {
@@ -199,11 +200,11 @@ a.selected-tab:hover {
 }
 
 .testimonial-heading {
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
 .testimonial-content-separator {
-    margin-bottom: 50px;
 }
 
 .picture-service-1 {
@@ -219,7 +220,7 @@ a.selected-tab:hover {
 }
 
 .contact-section-heading {
-    text-align: center;
+    text-align: left;
 }
 
 .contact-form {
@@ -243,6 +244,18 @@ a.selected-tab:hover {
 .error-label {
     color: red;
     float: right;
+}
+
+@media(max-width: 1199px) {
+    .name-label {
+        clear: both;
+        display: block;
+    }
+    .error-label-name {
+        clear: both;
+        float: left;
+        font-size: 12px;
+    }
 }
 
 .send-button {
