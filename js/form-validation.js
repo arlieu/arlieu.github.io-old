@@ -84,7 +84,6 @@ function submitContact() {
 
 	if (check[0] && check[1] && check[2] && check[3] && check[4]) {
 		document.getElementById("contact-form").setAttribute("action", "https://formspree.io/" + "contact" + "@" + "pstemcoaching" + ".com");
-		alert("Message successfully sent! If you provided an email address, you should receive a reply within 24 hours.");
 		return true;
 	}
 	else {
@@ -216,7 +215,6 @@ function submitRequest() {
 
 	if (check[0] && check[1] && check[2] && check[3] && check[4] && check[5] && check[6]) {
 		document.getElementById("request-form").setAttribute("action", "https://formspree.io/" + "requests" + "@" + "pstemcoaching" + ".com");
-		alert("Message successfully sent! You should receive a reply within 24 hours.");
 		return true;
 	}
 	else {
