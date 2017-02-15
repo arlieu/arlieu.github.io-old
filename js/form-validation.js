@@ -1,38 +1,42 @@
 function submitContact() {
 	function validFirstName() {
 		var firstName = document.getElementById("first-name").value;
-		if (!/^\s*$/.test(firstName)) {
-			firstName = firstName.replace(/\s/g, "");
+		firstName = firstName.replace(/\s/g, "");
+		if (firstName == "") {
+			document.getElementById("error-label-first-name").innerHTML="*Required field";
+			return false;
 		}
 
-		if (!/^[A-Za-z]+$/.test(firstName) && !/^\s*$/.test(firstName)) {
+		if (!/^[A-Za-z]+$/.test(firstName)) {
 			document.getElementById("error-label-first-name").innerHTML="*Alphabetical characters only";
 			return false;
 		}
 
-		document.getElementById("error-label-first-name").innerHTML="";
+		document.getElementById("error-label-first-name").innerHTML="*";
 		return true;
 	}
 
 	function validLastName() {
 		var lastName = document.getElementById("last-name").value;
-		if (!/^\s*$/.test(lastName)) {
-			lastName = lastName.replace(/\s/g, "");
+		lastName = lastName.replace(/\s/g, "");
+		if (lastName == "") {
+			document.getElementById("error-label-last-name").innerHTML="*Required field";
+			return false;
 		}
 
-		if (!/^[A-Za-z]+$/.test(lastName) && !/^\s*$/.test(lastName)) {
+		if (!/^[A-Za-z]+$/.test(lastName)) {
 			document.getElementById("error-label-last-name").innerHTML="*Alphabetical characters only";
 			return false;
 		}
 
-		document.getElementById("error-label-last-name").innerHTML="";
+		document.getElementById("error-label-last-name").innerHTML="*";
 		return true;
 	}
 
 	function validEmail() {
 		var email = document.getElementById("sender-email").value;
 		if (!/[^\s@]+@[^\s@]+\.[^\s@]+/.test(email) && !/^\s*$/.test(email)) {
-			document.getElementById("error-label-email").innerHTML="*Valid email required";
+			document.getElementById("error-label-email").innerHTML="*Not a valid email";
 			return false;
 		}
 
@@ -45,7 +49,7 @@ function submitContact() {
 	function validSubject() {
 		var subject = document.getElementById("subject").value;
 		if (!subject) {
-			document.getElementById("error-label-subject").innerHTML="*Subject required";
+			document.getElementById("error-label-subject").innerHTML="*Required field";
 			return false;
 		}
 
@@ -57,7 +61,7 @@ function submitContact() {
 	function validMessage() {
 		var message = document.getElementById("message").value;
 		if (!message) {
-			document.getElementById("error-label-message").innerHTML="*Message required";
+			document.getElementById("error-label-message").innerHTML="*Required field";
 			return false;
 		}
 
@@ -109,35 +113,37 @@ function validPaymentMethod() {
 
 
 function submitRequest() {
-	var firstNameValid = "";
-	var lastNameValid = "";
-	var messageValid = "";
-	var subjectSelection = null;
-	var coachSelection = null;
-
 	function validFirstName() {
 		var firstName = document.getElementById("first-name").value;
 		firstName = firstName.replace(/\s/g, "");
+		if (firstName == "") {
+			document.getElementById("error-label-first-name").innerHTML="*Required field";
+			return false;
+		}
+
 		if (!/^[A-Za-z]+$/.test(firstName)) {
 			document.getElementById("error-label-first-name").innerHTML="*Alphabetical characters only";
 			return false;
 		}
 
 		document.getElementById("error-label-first-name").innerHTML="*";
-		firstNameValid = firstName;
 		return true;
 	}
 
 	function validLastName() {
 		var lastName = document.getElementById("last-name").value;
 		lastName = lastName.replace(/\s/g, "");
+		if (lastName == "") {
+			document.getElementById("error-label-last-name").innerHTML="*Required field";
+			return false;
+		}
+
 		if (!/^[A-Za-z]+$/.test(lastName)) {
 			document.getElementById("error-label-last-name").innerHTML="*Alphabetical characters only";
 			return false;
 		}
 
 		document.getElementById("error-label-last-name").innerHTML="*";
-		lastNameValid = lastName;
 		return true;
 	}
 
@@ -168,7 +174,7 @@ function submitRequest() {
 			if (paymentUsername.length==0) {
 				document.getElementById("payment-username-label").style.display="inline-block";
 				document.getElementById("error-label-payment-username").style.display="inline";
-				document.getElementById("error-label-payment-username").innerHTML="*Username required";
+				document.getElementById("error-label-payment-username").innerHTML="*Required field";
 				return false;
 			}
 
@@ -185,9 +191,9 @@ function submitRequest() {
 	}
 
 	function validSubject() {
-		subjectSelection=document.getElementById("topic").value;
+		var subjectSelection=document.getElementById("topic").value;
 		if (!subjectSelection) {
-			document.getElementById("error-label-subject").innerHTML="*Subject required";
+			document.getElementById("error-label-subject").innerHTML="*Required field";
 			return false;
 		}
 
@@ -208,7 +214,7 @@ function submitRequest() {
 	}
 
 	function validCoach() {
-		coachSelection = document.getElementById("coach-selection").value;
+		var coachSelection = document.getElementById("coach-selection").value;
 	}
 
 	var check = [validFirstName(), validLastName(), validEmail(), validPaymentOption(), validPaymentUsername(), validSubject(), validService()];

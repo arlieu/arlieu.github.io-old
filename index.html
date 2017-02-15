@@ -351,14 +351,15 @@
                 <form class="contact-form" onsubmit="return submitContact()" method="POST" id="contact-form">
                     <input type="hidden" name="_next" value="index">
                     <input type="text" name="_gotcha" class="hidden-input">
+                    <input type="hidden" name="_cc" value="pbx69qfy@robot.zapier.com">
                     <div class="form-group first-name-field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                         <label for="first-name" class="name-label">First Name</label>
-                        <label for="first-name" class="error-label error-label-name" id="error-label-first-name"></label>
+                        <label for="first-name" class="error-label error-label-name" id="error-label-first-name">*</label>
                         <input type="text" name="first-name" class="form-control" id="first-name" placeholder="Enter first name">
                     </div>
                     <div class="form-group last-name-field col-lg-6 col-md-6 col-sm-6 col-xs-6">
                         <label for="last-name" class="name-label">Last Name</label>
-                        <label for="last-name" class="error-label error-label-name" id="error-label-last-name"></label>
+                        <label for="last-name" class="error-label error-label-name" id="error-label-last-name">*</label>
                         <input type="text" name="last-name" class="form-control" id="last-name" placeholder="Enter last name">
                     </div>
                     <div class="clearfix"></div>
